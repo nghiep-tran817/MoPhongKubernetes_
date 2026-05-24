@@ -134,7 +134,9 @@ button:hover{transform:translateY(-2px)}
 
 <h1>☸️ Kubernetes Cluster Simulator</h1>
 
-<div class="subtitle"> Hướng dẫn: Rolling update sẽ nâng version từ v1 → v2. Click node để simulate crash.</div>
+<div class="subtitle">     Hướng dẫn sử dụng: Khi nhấn vào rolling update thì các node sẽ chạy sang version 2. Nếu bạn muốn kiểm tra khi một node hỏng thì nhấn node đó -> nút đó chuyển màu và đóng vai trò là nút bị hỏng
+
+.</div>
 
 <div class="panel">
   <button onclick="fireBtn(this); simulateTraffic()">📈 Tăng Traffic</button>
@@ -272,7 +274,7 @@ async function rollingUpdate(){
     await sleep(500);
   }
 
-  log("✅ Upgrade hoàn tất lên v2");
+  log("✅ Upgrade hoàn tất lên version 2");
 }
 
 function sleep(ms){return new Promise(r=>setTimeout(r,ms));}
